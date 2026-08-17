@@ -1,0 +1,40 @@
+# Docker-specific files to ignore
+.dockerignore
+Dockerfile
+docker-compose.yml
+#docker/
+
+# Version control
+.git
+.gitignore
+.gitattributes
+
+# IDE and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Node.js (if building assets on host)
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-lock.yaml
+
+# PHP
+vendor/
+.php_cs
+.php_cs.cache
+
+# Laravel specific
+bootstrap/cache/*
+storage/logs/*
+storage/framework/*
+.env.local
+.env.*.php
+
+# OS files
+Thumbs.db
+.DS_Store

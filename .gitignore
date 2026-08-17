@@ -1,0 +1,68 @@
+# ==========================================
+# Dependências e Pacotes
+# ==========================================
+/vendor/
+/node_modules/
+
+# ==========================================
+# Variáveis de Ambiente e Credenciais
+# ==========================================
+.env
+.env.backup
+.env.production
+*.pem
+*.key
+
+# ==========================================
+# Armazenamento e Logs do Laravel (storage)
+# ==========================================
+/storage/*.key
+/storage/app/*
+!/storage/app/.gitignore
+!/storage/app/public/
+/storage/framework/cache/*
+!/storage/framework/cache/.gitignore
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitignore
+/storage/framework/testing/*
+!/storage/framework/testing/.gitignore
+/storage/framework/views/*
+!/storage/framework/views/.gitignore
+/storage/logs/*
+!/storage/logs/.gitignore
+
+# ==========================================
+# Cache de Bootstrap
+# ==========================================
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
+
+# ==========================================
+# Builds do Frontend (Vite)
+# ==========================================
+/public/build
+/public/hot
+/public/storage
+npm-debug.log*
+yarn-error.log*
+
+# ==========================================
+# Banco de Dados (PostgreSQL / Dumps locais)
+# ==========================================
+*.sql
+*.dump
+*.tar
+*.gz
+postgres-data/
+pgdata/
+docker/postgres/data/
+
+# ==========================================
+# IDEs e Sistema Operacional
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
