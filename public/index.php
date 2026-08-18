@@ -1,15 +1,12 @@
 ﻿<?php
-header('Content-Type: application/json');
 
-try {
-    $pdo = new PDO('pgsql:host=postgres;port=5432;dbname=laravel', 'laravel', 'secret');
-    $dbStatus = 'Conectado com sucesso ao PostgreSQL!';
-} catch (Exception $e) {
-    $dbStatus = 'Erro ao conectar: ' . $e->getMessage();
-}
+use Illuminate\Http\Request;
 
-echo json_encode([
-    'status' => 'online',
-    'php_version' => PHP_VERSION,
-    'database' => $dbStatus
-], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+define('LARAVEL_START', microtime(true));
+
+// Carrega o Autoloader do Composer
+require __DIR__.'/../vendor/autoload.php';
+
+// Inicializa a aplicação Laravel e processa a requisição HTTP
+(require_once __DIR__.'/../bootstrap/app.php')
+    ->handleRequest(Request::capture());

@@ -1,11 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
-Route::get('/', function () {
-    return response()->json(['message' => 'Laravel API running']);
-});
-
-Route::get('/health', function () {
-    return response()->json(['status' => 'ok']);
-});
+Route::apiResource('products', ProductController::class);
